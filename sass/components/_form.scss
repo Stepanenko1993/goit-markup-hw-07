@@ -226,6 +226,7 @@
      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
  }
+}
  .modal-form-text {
      display: block;
      font-size: 12px;
@@ -249,13 +250,13 @@
      position: absolute;
      top: 50%;
      left: 12px;
-     transform: translateY(-50%)
+     transform: translateY(-50%);
  
-
-    &;focus+.logo-form {
+ }
+    .form-input:focus+.logo-form {
      fill: var(--logo-color);
  }
-}
+
  
 
  .button-form-input {
@@ -362,5 +363,4 @@
 
  .form-link {
      color: var(--logo-color);
- }
  }

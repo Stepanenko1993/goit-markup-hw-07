@@ -29,6 +29,12 @@
 
 }
 
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
 .button-backdrop {
     position: absolute;
     top: 8px;
@@ -44,7 +50,7 @@
     cursor: pointer;
 
 
-&.is-hidden {
+    &.is-hidden {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;

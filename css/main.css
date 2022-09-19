@@ -83,9 +83,7 @@ ul {
 .logo-link-footer {
   fill: var(--secondary-text-color);
 }
-
-.logo-footer-link-list:hover,
-.logo-footer-link-list:focus {
+.logo-link-footer:hover, .logo-link-footer:focus {
   background-color: var(--logo-color);
 }
 
@@ -139,16 +137,14 @@ ul {
 .modal-open {
   border: none;
 }
-
-.modal-open {
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-open:hover,
-.modal-open:focus {
+.modal-open:hover, .modal-open:hover {
   cursor: pointer;
   box-shadow: 0px 4px 4px var(--box-shadow);
   border-radius: 4px;
+}
+
+.modal-open {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop {
@@ -179,6 +175,12 @@ ul {
   color: var(--logo-color-black);
 }
 
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .button-backdrop {
   position: absolute;
   top: 8px;
@@ -193,11 +195,16 @@ ul {
   border-radius: 50%;
   cursor: pointer;
 }
-
-.backdrop.is-hidden {
+.button-backdrop.is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+}
+
+.button-backdrop:hover,
+.button-backdrop:focus {
+  fill: var(--logo-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .current {
@@ -236,13 +243,12 @@ ul {
 .mail-link {
   margin-right: 30px;
 }
+.mail-link:hover {
+  color: var(--logo-color);
+}
 
 .mail-img {
   margin-right: 10px;
-}
-
-.mail-link:hover {
-  color: var(--logo-color);
 }
 
 .contact-phone:hover {
@@ -366,10 +372,6 @@ ul {
 }
 
 .team {
-  margin-bottom: 50px;
-}
-
-.team {
   color: var(--color-dark);
   font-size: 36px;
   line-height: 1.16;
@@ -396,7 +398,6 @@ ul {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
-  margin-bottom: 16px;
 }
 
 .name {
@@ -414,16 +415,11 @@ ul {
 
 .job-title {
   margin-top: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 
 .social-list-icon {
   fill: var(--background-icon);
-}
-
-.social-list-link:hover,
-.social-list-link:focus {
-  background-color: var(--logo-color);
 }
 
 .social-list-link:hover .social-list-icon,
@@ -444,10 +440,10 @@ ul {
   height: 44px;
   border-radius: 50px;
   background-color: var(--secondary-text-color);
-}
-
-.social-list-link {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-list-link:hover, .social-list-link:focus {
+  background-color: var(--logo-color);
 }
 
 .link-icon-clients,
@@ -484,15 +480,14 @@ ul {
   border: 1px solid #AFB1B8;
   border-radius: 4px;
 }
-
-.icon-logo-items:hover .logo-items-container,
-.icon-logo-items:focus .logo-items-container {
+.icon-logo-items:hover, .icon-logo-items:focus {
   border-color: var(--logo-color);
+  color: var(--logo-color);
   cursor: pointer;
 }
 
-.icon-logo-items:hover,
-.icon-logo-items:focus {
+.icon-logo-items:hover .logo-items-container,
+.icon-logo-items:focus .logo-items-container {
   border-color: var(--logo-color);
   cursor: pointer;
 }
@@ -504,11 +499,6 @@ ul {
 
 .logo-items-container {
   fill: currentColor;
-}
-
-.icon-logo-items:hover,
-.icon-logo-items:focus {
-  color: var(--logo-color);
 }
 
 .logo-items-container {
@@ -620,13 +610,6 @@ ul {
   column-gap: 10px;
 }
 
-.button-telegram:hover,
-.button-telegram:focus {
-  cursor: pointer;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .main-footer {
   background-color: var(--accent-color);
   padding-top: 60px;
@@ -647,6 +630,12 @@ ul {
   border-radius: 4px;
   margin-left: 12px;
   padding-right: 28px;
+  letter-spacing: 0.06em;
+}
+.button-telegram:hover, .button-telegram:focus {
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .text-modal-batton {
@@ -666,10 +655,6 @@ ul {
 
 .text-footer-form {
   margin-left: auto;
-  align-items: center;
-  justify-content: center;
-  width: 570px;
-  height: 86px;
   margin-left: auto;
 }
 
@@ -722,17 +707,15 @@ ul {
 .type {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.type:hover, .type:focus {
+  color: var(--secondary-text-color);
+  background-color: var(--logo-color);
+}
 
 .type-section {
   width: 73px;
   height: 38px;
   border-radius: 4px;
-}
-
-.type:hover,
-.type:focus {
-  color: var(--secondary-text-color);
-  background-color: var(--logo-color);
 }
 
 .container-type {
@@ -764,14 +747,12 @@ ul {
   border-bottom: 1px solid var(--border-solid);
 }
 
-.employees-link:hover,
-.employees-link:focus {
-  display: block;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
 .employees-link {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.employees-link:hover, .employees-link:focus {
+  display: block;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .overlay {
@@ -944,6 +925,10 @@ ul {
   padding-left: 42px;
   outline: none;
 }
+.form-input:focus {
+  border-color: var(--logo-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .form-textarea {
   width: 100%;
@@ -954,6 +939,10 @@ ul {
   padding: 12px 16px;
   margin-bottom: 20px;
   outline: none;
+}
+.form-textarea:focus {
+  border-color: var(--logo-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-text {
@@ -980,6 +969,10 @@ ul {
   transform: translateY(-50%);
 }
 
+.form-input:focus + .logo-form {
+  fill: var(--logo-color);
+}
+
 .button-form-input {
   align-self: center;
   width: 200px;
@@ -989,9 +982,7 @@ ul {
   border-radius: 4px;
   border: none;
 }
-
-.button-form-input:hover,
-.button-form-input:focus {
+.button-form-input:hover, .button-form-input:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1004,26 +995,6 @@ ul {
   align-items: center;
   text-align: center;
   color: var(--secondary-text-color);
-}
-
-.form-input:focus + .logo-form {
-  fill: var(--logo-color);
-}
-
-.form-input:focus {
-  border-color: var(--logo-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-textarea:focus {
-  border-color: var(--logo-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.button-backdrop:hover,
-.button-backdrop:focus {
-  fill: var(--logo-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-textarea::placeholder {
@@ -1086,5 +1057,17 @@ ul {
 }
 
 .form-link {
+  color: var(--logo-color);
+}
+
+.current {
+  color: var(--logo-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+}
+
+.current:hover,
+.current:focus {
   color: var(--logo-color);
 }/*# sourceMappingURL=main.css.map */

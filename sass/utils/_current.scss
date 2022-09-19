@@ -3,11 +3,11 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
+}
 
-&:hover,
-&:focus {
+.current:hover,
+.current:focus {
     color: var(--logo-color);
 }
 
-}
 
